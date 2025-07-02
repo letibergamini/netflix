@@ -1,7 +1,7 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker # Import for the director plot
+import matplotlib.ticker as ticker
 
 # --- Data Loading, Cleaning, and Analysis Functions ---
 
@@ -181,7 +181,6 @@ def plot_content_type_distribution(type_counts: pd.Series):
     plt.axis("equal")
 
     plt.subplot(1, 2, 2)
-    # Corrected: Use sns.barplot or plt.bar for pre-aggregated counts
     sns.barplot(x=type_counts.index, y=type_counts.values, palette=["skyblue", "lightcoral"])
     plt.title("Distribution of Movies and TV Shows")
     plt.xlabel("Type of Show")
@@ -192,7 +191,7 @@ def plot_content_type_distribution(type_counts: pd.Series):
 def plot_yearly_cumulative_content(type_added_by_year: pd.DataFrame):
     """Plots the cumulative number of Movies and TV Shows added over years."""
     cumulative_counts = type_added_by_year.cumsum()
-    print("\n--- Cumulative Content Added by Year ---\n", cumulative_counts) # Re-print for context if desired
+    print("\n--- Cumulative Content Added by Year ---\n", cumulative_counts) 
 
     cumulative_counts.plot(kind="line", marker="o", figsize=(10, 6), color=["skyblue", "pink"])
     plt.title("Cumulative Number of Movies and TV Shows Added Over Years")
@@ -338,7 +337,7 @@ if __name__ == "__main__":
     # 2. Data Cleaning and Feature Engineering
     netflix_df = clean_and_extract_dates(netflix_df)
     netflix_df = clean_duration_and_seasons(netflix_df)
-    get_null_value_summary(netflix_df) # This function also prints summaries
+    get_null_value_summary(netflix_df) 
 
     # 3. Prepare Data for Visualizations (Analysis)
     content_type_data = get_content_type_data(netflix_df)
@@ -346,7 +345,7 @@ if __name__ == "__main__":
     monthly_content_data = get_monthly_content_data(netflix_df)
     movie_duration_data = get_movie_duration_data(netflix_df)
     tv_show_season_data = get_tv_show_season_data(netflix_df)
-    get_oldest_content_data(netflix_df) # This function prints summaries
+    get_oldest_content_data(netflix_df)
     popular_directors_data = get_popular_directors_data(netflix_df)
     popular_actors_data = get_popular_actors_data(netflix_df)
     popular_countries_data = get_popular_countries_data(netflix_df)
