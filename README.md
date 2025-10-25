@@ -1,6 +1,6 @@
 # netflix
 
-This project focuses on analyzing a Netflix dataset using Python. The goal is to explore patterns in the platform’s content — such as trends over time, distribution by type, country, and genre.
+This project focuses on analyzing a Netflix dataset using Python. The goal is to explore patterns in the platform’s content, such as trends over time, distribution by type, country, and genre.
 
 Key tools and libraries:
 
