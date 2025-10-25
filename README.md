@@ -8,7 +8,7 @@ Key tools and libraries:
 
 - Matplotlib and Seaborn for data visualization
 
-This analysis was a personal project to strengthen my Python skills and practice turning data into insights.
+This analysis was a personal project to strengthen my Python skills and to practice gaining insights from data.
 
 See more on my [blog](https://letiziabergamini.blog/posts/netflix/).
 
